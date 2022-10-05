@@ -1,6 +1,6 @@
 {
   "name": "@text/eslint-config",
-  "version": "3.0.1",
+  "version": "0.0.1",
   "main": "index.js",
   "dependencies": {
     "eslint-plugin-import": "^2.26.0"
