@@ -1,26 +1,31 @@
-### [@macpaw/eslint-config-base](eslint-config-base/index.js)
+## Linting for WTT projects
+
+### Cofiguration 
 
 `yarn add --dev @macpaw/eslint-config-base`
-
-### [@macpaw/eslint-config-react](eslint-config-react/index.js)
-
 `yarn add --dev @macpaw/eslint-config-react`
-
-### [@macpaw/eslint-config-typescript](eslint-config-typescript/index.js)
-
-`yarn add --dev @macpaw/eslint-config-typescript`
 
 ## Usage
 
-Extend necessary configs inside `.eslintrc.json`:
+Write to `.eslintrc`:
 
 ```
 {
   "extends": [
-    "@macpaw/eslint-config-base", // required
-    "@macpaw/eslint-config-react", // optional
-    "@macpaw/eslint-config-typescript" // optional
+    "@macpaw/eslint-config-base",  
+    "@macpaw/eslint-config-react"  
   ]
+}
+```
+
+Write to `package.json`:
+
+```
+...
+"scripts": {
+  ...
+  "lint": "eslint src",
+  "lint:fix": "eslint --fix src"  
 }
 ```
 
