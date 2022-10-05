@@ -20,7 +20,7 @@ Write to `.eslintrc`:
 }
 ```
 
-Write to `package.json`:
+Write to `package.json` (`src` - directory with a project source code):
 
 ```
 ...
@@ -30,6 +30,8 @@ Write to `package.json`:
   "lint:fix": "eslint --fix src"  
 }
 ```
+
+Then run `yarn lint` to see project errors
 
 ## Deploy
 
