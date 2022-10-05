@@ -2,8 +2,9 @@
 
 ### Cofiguration 
 
-`yarn add --dev @macpaw/eslint-config-base`
-`yarn add --dev @macpaw/eslint-config-react`
+```yarn add --dev @macpaw/eslint-config-base
+yarn add --dev @macpaw/eslint-config-react
+```
 
 ## Usage
 
