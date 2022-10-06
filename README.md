@@ -37,8 +37,12 @@ Then run `yarn lint` to see project errors and/or configure your text editor acc
 
 ## Deploy
 
-1. Run one of `yarn patch`, `yarn minor`, `yarn major` scripts to bump package.json version for each package
-2. [Create new release
+1. Call `yarn login` in console to login into your npmjs.com account 
+
+2. Run `yarn patch` (or `yarn version`, `yarn minor` or `yarn major`) to  increate this package version 
+3. commit & push changes
+
+4. 
 
 ## Testing in related projects
 There is a way to test new version of eslint-config without publishing it to npm:
