@@ -3,9 +3,7 @@
 ### Cofiguration 
 
 ```
-yarn add --dev @macpaw/eslint-config-base
-yarn add --dev @macpaw/eslint-config-react
-```
+yarn add --dev @wtt-solutions/eslint-config
 
 ## Usage
 
@@ -13,14 +11,16 @@ Write to `.eslintrc`:
 
 ```
 {
+  ...
   "extends": [
-    "@macpaw/eslint-config-base",  
-    "@macpaw/eslint-config-react"  
+    "@wtt-solutions/eslint-config",  
+    "@wtt-solutions/eslint-config/react"  
   ]
+  ...
 }
 ```
 
-Write to `package.json` (`src` - directory with a project source code):
+Write to `package.json` 
 
 ```
 ...
@@ -31,17 +31,19 @@ Write to `package.json` (`src` - directory with a project source code):
 }
 ```
 
-Then run `yarn lint` to see project errors
+where `src` is the directory wit a project sources
+
+Then run `yarn lint` to see project errors and/or configure your text editor accordingly.
 
 ## Deploy
 
 1. Run one of `yarn patch`, `yarn minor`, `yarn major` scripts to bump package.json version for each package
-2. [Create new release](https://github.com/MacPaw/eslint-config/releases/new)
+2. [Create new release
 
 ## Testing in related projects
 There is a way to test new version of eslint-config without publishing it to npm:
 
 1. Execute `npm link` inside a necessary config project root.
-2. Execute `npm link @macpaw/eslint-config-${name}` inside related project's root.
+2. Execute `npm link @wtt-solutions/eslint-config` inside related project's root.
 3. Rebuild related project if needed.
-4. When finish testing run `npm unlink @macpaw/eslint-config-${name}`
+4. When finish testing run `npm unlink @wtt-solutions/eslint-config`
