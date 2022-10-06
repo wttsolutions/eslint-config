@@ -1,9 +1,11 @@
 {
   "name": "@wttsolutions/eslint-config",
-  "version": "0.0.21",
+  "version": "0.0.22",
   "main": "index.js",
   "scripts": {
-    "publ": "yarn publish --patch --access public"
+    "publ": "yarn publish --patch --access public",
+    "publ:major": "yarn publish --major --access public",
+    "publ:minor": "yarn publish --minor --access public"
   },
   "dependencies": {
     "eslint-plugin-import": "^2.26.0"
