@@ -1,4 +1,5 @@
 module.exports = {
+  parser: '@babel/eslint-parser',
   env: {
     browser: true,
     es6: true,
@@ -10,8 +11,9 @@ module.exports = {
     'plugin:import/warnings',
     'eslint-config-airbnb'
   ],
-  parser: '@babel/eslint-parser',
+
   parserOptions: {
+    requireConfigFile: false,  // for babel
     ecmaVersion: 2022,
     sourceType: 'module',
     ecmaFeatures: {

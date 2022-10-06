@@ -1,4 +1,8 @@
 module.exports = {
+  parser: '@babel/eslint-parser',
+  parserOptions: {
+    requireConfigFile: false,  // for babel
+  }
   env: {
     browser: true,
     es6: true,
@@ -7,7 +11,7 @@ module.exports = {
     './index',     // base
     'plugin:react/recommended',
     'plugin:react-hooks/recommended',
-    'react-app',   // CRA
+    //'react-app',   // CRA
   ],
 
   plugins: [
