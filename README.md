@@ -39,10 +39,9 @@ Then run `yarn lint` to see project errors and/or configure your text editor acc
 
 1. Call `yarn login` in console to login into your npmjs.com account 
 
-2. Run `yarn patch` (or `yarn version`, `yarn minor` or `yarn major`) to  increate this package version 
-3. commit & push changes
+2. Commit & push changes
 
-4. 
+3. `yarn publish --patch --access public`
 
 ## Testing in related projects
 There is a way to test new version of eslint-config without publishing it to npm:
