@@ -1,13 +1,13 @@
-## Linting for WTT projects
+# Eslint for WTT projects
 
-### Cofiguration 
+## Setup for your project
+
 
 ```
 yarn add --dev @wtt-solutions/eslint-config
+```  
 
-## Usage
-
-Write to `.eslintrc`:
+Create local config `.eslintrc`:
 
 ```
 {
@@ -15,7 +15,10 @@ Write to `.eslintrc`:
   "extends": [
     "@wtt-solutions/eslint-config",  
     "@wtt-solutions/eslint-config/react"  
-  ]
+  ],
+  rules: {
+    // any local rules & exceptions
+  }
   ...
 }
 ```
@@ -33,20 +36,33 @@ Write to `package.json`
 
 where `src` is the directory wit a project sources
 
-Then run `yarn lint` to see project errors and/or configure your text editor accordingly.
+Run run `yarn lint` to see project errors and/or configure your text editor accordingly.
 
-## Deploy
+Configure your code editor to use `.eslintrc` rules
 
-1. Call `yarn login` in console to login into your npmjs.com account 
+## Internal: modify & publish this repository
 
-2. Commit & push changes
+1. Make sure you have wright permissions to the https://github.com/wttsolutions/eslint-config repository and your http://npmjs.com acccount included into the [npmjs.com -> wttsolutions -> develpers](https://www.npmjs.com/settings/wttsolutions/teams/team/developers/users) team members
 
-3. `yarn publish --patch --access public`
+1. Make your changes to code & increase package version:
+```
+yarn version:patch
+```    
 
-## Testing in related projects
-There is a way to test new version of eslint-config without publishing it to npm:
+1. Commit & push your changes:
+```
+git commit ....
+git push      
+```
 
-1. Execute `npm link` inside a necessary config project root.
-2. Execute `npm link @wtt-solutions/eslint-config` inside related project's root.
-3. Rebuild related project if needed.
-4. When finish testing run `npm unlink @wtt-solutions/eslint-config`
+1. Log in to https://npmjs.com (2-factor authentication to will be required):
+```
+yarn login
+```
+
+1. Publish a package:
+```
+yarn publ
+```      
+
+
