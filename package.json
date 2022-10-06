@@ -1,5 +1,5 @@
 {
-  "name": "@text/eslint-config",
+  "name": "@wtt-solutions/eslint-config",
   "version": "0.0.1",
   "main": "index.js",
   "dependencies": {
