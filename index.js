@@ -4,44 +4,164 @@ module.exports = {
     es6: true,
     node: true,
   },
-  extends: 'eslint:recommended',
+  extends: [
+    'eslint:recommended',
+    'plugin:import/errors',
+    'plugin:import/warnings',
+    'eslint-config-airbnb'
+  ],
+  parser: '@babel/eslint-parser',
   parserOptions: {
-    ecmaVersion: 2020,
+    ecmaVersion: 2022,
     sourceType: 'module',
+    ecmaFeatures: {
+      'jsx': true,
+      'blockBindings': true,
+      'experimentalObjectRestSpread': true
+    }
   },
-  plugins: ['import'],
+  plugins: [
+    'no-loops',
+    'import'
+  ],
+  globals: {
+    '__DEVELOPMENT__': true,
+    // '__CLIENT__': true,
+    // '__SERVER__': true,
+    // '__DISABLE_SSR__': true,
+    // '__DEVTOOLS__': true,
+    //'require': true,
+    'Promise': true,
+    'Set': true,
+    'Symbol': true
+  },
+  settings: {
+    'import/resolver': {
+      'node': {
+        'moduleDirectory': ['node_modules', 'src']
+      }
+    },
+    'import/ignore': [
+      'node_modules',
+      '.(scss|less|css)$',
+      '.(yaml)$',
+      './src/utils/streamedian.min.js'
+    ]
+  },
   rules: {
-    // disable unnecessary recommended rules
-    'no-console': 0,
-    'no-constant-condition': 0,
-
-    // best practices
-    'accessor-pairs': 2,
-    'array-callback-return': 2,
-    'consistent-return': 2,
-    'dot-location': [2, 'property'],
-    'eqeqeq': [2, 'smart'],
-    'no-caller': 2,
-    'no-global-assign': 2,
-    'no-extend-native': 2,
-    'no-extra-bind': 2,
-    'no-extra-label': 2,
-    'no-invalid-this': 2,
-    'no-iterator': 2,
-    'no-labels': 2,
-    'no-lone-blocks': 2,
-    'no-loop-func': 2,
-    'no-new': 2,
-    'no-new-wrappers': 2,
-    'no-proto': 2,
-    'no-return-assign': 2,
-    'no-self-compare': 2,
-    'no-sequences': 2,
-    'no-throw-literal': 2,
-    'no-void': 2,
-    'no-unused-expressions': 2,
-    'no-unsafe-negation': 2,
-    'no-useless-call': 2,
-    'no-useless-concat': 2,
+    'array-bracket-spacing': 'off', // sometimes looks better with spaces
+    'arrow-body-style': 'off',  // not so big problem
+    'arrow-parens': 'off',
+    'arrow-spacing': 'warn',
+    'brace-style': ['warn','1tbs', { 'allowSingleLine': false }],
+    'class-methods-use-this': 'off',
+    'comma-dangle': 'off',
+    'comma-spacing': 'warn',
+    'comma-style': ['error','last'],
+    'computed-property-spacing': 'error',
+    'consistent-this': ['error','self'],
+    'constructor-super': 'error',
+    'curly': ['error', 'multi-line'],
+    'dot-notation': 'off',  // sometimes looks better: rates['USD']
+    'eqeqeq': ['warn', 'smart'],
+    'func-names': ['off'],     // it's too lazy
+    'function-paren-newline': 'off',
+    'getter-return': 'error',
+    'import/first': ['warn'],       // warn, not error
+    'import/no-commonjs': 'off',
+    'import/prefer-default-export': 'off', // disagree. sometimes multiple exports ok
+    'indent': ['off'],  //sometimes differs on editors (wrapping on long lines)
+    'import/order': 'warn',
+    'jsx-a11y/accessible-emoji': 'off',
+    'jsx-a11y/alt-text': 'off',
+    'jsx-a11y/anchor-has-content': 'off',
+    'jsx-a11y/anchor-is-valid': 'off',
+    'jsx-a11y/aria-activedescendant-has-tabindex': 'off',
+    'jsx-a11y/aria-props': 'off',
+    'jsx-a11y/aria-proptypes': 'off',
+    'jsx-a11y/aria-role': 'off',
+    'jsx-a11y/aria-unsupported-elements': 'off',
+    'jsx-a11y/click-events-have-key-events': 'off',
+    'jsx-a11y/heading-has-content': 'off',
+    'jsx-a11y/href-no-hash': 'off',
+    'jsx-a11y/html-has-lang': 'off',
+    'jsx-a11y/iframe-has-title': 'off',
+    'jsx-a11y/img-redundant-alt': 'off',
+    'jsx-a11y/interactive-supports-focus': 'off',
+    'jsx-a11y/label-has-for': 'off',
+    'jsx-a11y/lang': 'off',
+    'jsx-a11y/media-has-caption': 'off',
+    'jsx-a11y/mouse-events-have-key-events': 'off',
+    'jsx-a11y/no-access-key': 'off',
+    'jsx-a11y/no-autofocus': 'off',
+    'jsx-a11y/no-distracting-elements': 'off',
+    'jsx-a11y/no-interactive-element-to-noninteractive-role': 'off',
+    'jsx-a11y/no-noninteractive-element-interactions': 'off',
+    'jsx-a11y/no-noninteractive-element-to-interactive-role': 'off',
+    'jsx-a11y/no-noninteractive-tabindex': 'off',
+    'jsx-a11y/no-onchange': 'off',
+    'jsx-a11y/no-redundant-roles': 'off',
+    'jsx-a11y/no-static-element-interactions': 'off',
+    'jsx-a11y/role-has-required-aria-props': 'off',
+    'jsx-a11y/role-supports-aria-props': 'off',
+    'jsx-a11y/scope': 'off',
+    'jsx-a11y/tabindex-no-positive': 'off',
+    'key-spacing': 'warn',
+    'keyword-spacing': ['error', { 'overrides': { 'catch': { 'after': false }, } }],
+    'max-len': 'off',
+    'no-await-in-loop': 'error',
+    'no-class-assign': 'error',
+    'no-cond-assign': ['error', 'except-parens'],
+    'no-console': 'warn',
+    'no-continue': 'off',
+    'no-dupe-args': 'error',
+    'no-dupe-keys': 'error',
+    'no-duplicate-case': 'error',
+    'no-duplicate-imports': 'error',
+    'no-else-return': ['error',{'allowElseIf': false}],
+    'no-empty': ['error', { 'allowEmptyCatch': true }],
+    'no-extra-semi':'warn',
+    'no-invalid-regexp': 'error',
+    'no-lonely-if': 'off',     // sometimes conditions are different ideologically
+    'no-mixed-operators': 'off',  // not seems to me a big problem, no extra braces
+    'no-multi-spaces': ['warn', { ignoreEOLComments: true }],
+    'no-multiple-empty-lines': 'off',
+    'no-param-reassign': ['error', { 'props': false }],   // allow param props assign
+    'no-prototype-builtins': 'off', // too specific limitation (disabled to allow o.hasOwnProperty(...)
+    'no-redeclare': 'error',
+    'no-return-await': 'error',
+    'no-this-before-super': 'error',
+    'no-trailing-spaces': ['warn'],       // warn, not error
+    'no-undef': 'error',
+    'no-underscore-dangle': 'off',
+    'no-unneeded-ternary': 'error',
+    'no-unsafe-negation': 'error',
+    'no-unused-vars': ['warn', { 'args': 'none'}],
+    'no-useless-call': 'error',
+    'no-useless-constructor': ['warn'],       // warn, not error
+    'no-var': 'error',
+    'no-whitespace-before-property': 'error',
+    'object-curly-newline': 'off',   // seems not very critical
+    'object-curly-spacing': 'off',
+    'object-shorthand': 'off',
+    'one-var': ['error','never'],
+    'padded-blocks': 'off', // not so strict problem
+    'prefer-arrow-callback': ['off'],  // not needed strictly
+    'prefer-const': ['warn'],            // warn, not error
+    'prefer-destructuring': 'off',   // sometimes old way looks better
+    'prefer-regex-literals': 'warn',
+    'prefer-template': 'off', // sometimes plus-concatenation is useful tho
+    'quote-props': 'off',     // sometimes similar qouted looks better
+    'quotes': ['warn', 'single', {avoidEscape: true, allowTemplateLiterals: true}],
+    'semi': 'off',   // use no-unexpected-multiline instead
+    'space-before-blocks': ['warn','always'],
+    'space-before-function-paren': 'off',  // no matters actually
+    'space-in-paren': 'off',
+    'space-in-parens': 'off',
+    'space-infix-ops': 'off', // disabled until spaceless func named params support
+    'spaced-comment': 'off',
+    'strict': 'off',
+    'use-isnan': 'error',
+    'yoda': ['error','never'],
   }
 };

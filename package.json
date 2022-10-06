@@ -1,6 +1,6 @@
 {
   "name": "@wttsolutions/eslint-config",
-  "version": "0.0.33",
+  "version": "0.0.34",
   "main": "index.js",
   "scripts": {
     "version:patch": "yarn version --patch --no-git-tag-version",
@@ -9,10 +9,15 @@
     "publ": "yarn publish --no-git-tag-version --access public"
   },
   "dependencies": {
-    "eslint-plugin-import": "^2.26.0"
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "eslint-plugin-react": "^7.31.8",
+    "eslint-plugin-react-hooks": "^4.6.0"
   },
   "devDependencies": {
-    "eslint": "^8.16.0"
+    "eslint": "^8.24.0",
+    "prettier": "^2.7.1"
   },
   "peerDependencies": {
     "eslint": "^8.0.0"
