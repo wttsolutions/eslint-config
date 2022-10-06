@@ -9,6 +9,7 @@
     "publ": "yarn publish --no-git-tag-version --access public"
   },
   "dependencies": {
+    "eslint-config-airbnb": "^19.0.4",
     "eslint-config-prettier": "^8.5.0",
     "eslint-plugin-import": "^2.26.0",
     "eslint-plugin-prettier": "^4.2.1",
