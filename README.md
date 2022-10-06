@@ -60,7 +60,7 @@ git push
 yarn login
 ```
 
-1. Publish a package:
+1. Publish a package (just skip version question - the new one is already wrote to package.json):
 ```
 yarn publ
 ```      

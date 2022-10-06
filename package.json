@@ -6,7 +6,7 @@
     "version:patch": "yarn version --patch --no-git-tag-version",
     "version:minor": "yarn version --minor --no-git-tag-version",
     "version:major": "yarn version --major --no-git-tag-version",
-    "publ": "yarn publish --access public"
+    "publ": "yarn publish --no-git-tag-version --access public"
   },
   "dependencies": {
     "eslint-plugin-import": "^2.26.0"
