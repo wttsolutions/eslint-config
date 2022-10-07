@@ -2,7 +2,14 @@ module.exports = {
   parser: '@babel/eslint-parser',
   parserOptions: {
     requireConfigFile: false,  // for babel
-  }
+    ecmaFeatures: {
+      'jsx': true,
+    },
+    babelOptions: {
+      presets: ["@babel/preset-react"]
+    },
+  },
+
   env: {
     browser: true,
     es6: true,
@@ -11,9 +18,7 @@ module.exports = {
     './index',     // base
     'plugin:react/recommended',
     'plugin:react-hooks/recommended',
-    //'react-app',   // CRA
   ],
-
   plugins: [
     'react',
   ],
@@ -23,6 +28,40 @@ module.exports = {
     },
   },
   rules: {
+    'jsx-a11y/accessible-emoji': 'off',
+    'jsx-a11y/alt-text': 'off',
+    'jsx-a11y/anchor-has-content': 'off',
+    'jsx-a11y/anchor-is-valid': 'off',
+    'jsx-a11y/aria-activedescendant-has-tabindex': 'off',
+    'jsx-a11y/aria-props': 'off',
+    'jsx-a11y/aria-proptypes': 'off',
+    'jsx-a11y/aria-role': 'off',
+    'jsx-a11y/aria-unsupported-elements': 'off',
+    'jsx-a11y/click-events-have-key-events': 'off',
+    'jsx-a11y/heading-has-content': 'off',
+    'jsx-a11y/href-no-hash': 'off',
+    'jsx-a11y/html-has-lang': 'off',
+    'jsx-a11y/iframe-has-title': 'off',
+    'jsx-a11y/img-redundant-alt': 'off',
+    'jsx-a11y/interactive-supports-focus': 'off',
+    'jsx-a11y/label-has-for': 'off',
+    'jsx-a11y/lang': 'off',
+    'jsx-a11y/media-has-caption': 'off',
+    'jsx-a11y/mouse-events-have-key-events': 'off',
+    'jsx-a11y/no-access-key': 'off',
+    'jsx-a11y/no-autofocus': 'off',
+    'jsx-a11y/no-distracting-elements': 'off',
+    'jsx-a11y/no-interactive-element-to-noninteractive-role': 'off',
+    'jsx-a11y/no-noninteractive-element-interactions': 'off',
+    'jsx-a11y/no-noninteractive-element-to-interactive-role': 'off',
+    'jsx-a11y/no-noninteractive-tabindex': 'off',
+    'jsx-a11y/no-onchange': 'off',
+    'jsx-a11y/no-redundant-roles': 'off',
+    'jsx-a11y/no-static-element-interactions': 'off',
+    'jsx-a11y/role-has-required-aria-props': 'off',
+    'jsx-a11y/role-supports-aria-props': 'off',
+    'jsx-a11y/scope': 'off',
+    'jsx-a11y/tabindex-no-positive': 'off',
     'react/display-name': 'off',  // sometimes redundant
     'react/forbid-prop-types': 'warn',
     'react/function-component-definition': ['warn', { 'namedComponents': ['function-declaration', 'function-expression', 'arrow-function'], 'unnamedComponents': ['function-expression', 'arrow-function']}],
@@ -48,5 +87,7 @@ module.exports = {
     'react/self-closing-comp': 'off', // sometimes component potentially growc
     'react/sort-comp': 'off',  // benefit less than afford to maintain
     'semi-spacing': 'warn',
+    "react/react-in-jsx-scope": "off", // not necessary nowdays
+    "react/jsx-uses-react": "off",     // not necessary nowdays
   }
 };
