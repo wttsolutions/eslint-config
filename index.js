@@ -130,5 +130,6 @@ module.exports = {
     'strict': 'off',
     'use-isnan': 'error',
     'yoda': ['error','never'],
+    'no-plusplus': ['error', { 'allowForLoopAfterthoughts': true }]
   }
 };
