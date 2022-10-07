@@ -7,14 +7,14 @@
 yarn add --dev @wttsolutions/eslint-config
 ```  
 
-Create local config `.eslintrc`:
+Create the local config `.eslintrc`:
 
 ```
 {
   ...
   "extends": [
-    "@wttsolutions/eslint-config",  
-    // OR "@wttsolutions/eslint-config/react"  
+    "@wttsolutions/eslint-config/react",  
+    // OR "@wttsolutions/eslint-config" if no React  
   ],
   rules: {
     // any local rules & exceptions
@@ -23,22 +23,28 @@ Create local config `.eslintrc`:
 }
 ```
 
-Write to `package.json` 
+Modify the `package.json`:
 
 ```
 ...
 "scripts": {
   ...
   "lint": "eslint src",
-  "lint:fix": "eslint --fix src"  
+  "lint:fix": "eslint --fix src"
+}
+...
+"eslintConfig": {
+  "extends": [
+    "./.eslintrc"
+  ]
 }
 ```
 
-where `src` is the directory wit a project sources
+NOTE: `src` is the project sources directory
 
-Run run `yarn lint` to see a project errors.
+Run run `yarn lint` to check a project errors are displayed in console.
 
-Configure your code editor to use `.eslintrc` rules
+Configure your code editor to use `.eslintrc` rules.
 
 ## Internal: modify & publish this repository
 
@@ -61,4 +67,7 @@ yarn login
 yarn publ
 ```      
 
+### TODO
+
+* ts support
 
