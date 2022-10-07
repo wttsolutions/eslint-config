@@ -1,6 +1,6 @@
 {
   "name": "@wttsolutions/eslint-config",
-  "version": "0.0.47",
+  "version": "0.0.48",
   "main": "index.js",
   "scripts": {
     "version:patch": "yarn version --patch --no-git-tag-version",
@@ -16,7 +16,6 @@
     "eslint-config-prettier": "^8.5.0",
     "eslint-plugin-import": "^2.26.0",
     "eslint-plugin-no-loops": "^0.3.0",
-    "eslint-plugin-prettier": "^4.2.1",
     "eslint-plugin-react": "^7.31.8",
     "eslint-plugin-react-hooks": "^4.6.0"
   },
