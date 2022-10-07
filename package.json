@@ -1,6 +1,6 @@
 {
   "name": "@wttsolutions/eslint-config",
-  "version": "0.0.44",
+  "version": "0.0.45",
   "main": "index.js",
   "scripts": {
     "version:patch": "yarn version --patch --no-git-tag-version",
