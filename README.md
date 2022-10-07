@@ -38,10 +38,10 @@ Modify the `package.json`:
 ...
 "scripts": {
   ...
-  "prettier": "prettier -l src"
-  "prettier:fix": "prettier -w src"
+  "prettier": "prettier -l src",
+  "prettier:fix": "prettier -w src",
   "lint": "eslint src",
-  "lint:fix": "eslint --fix src",
+  "lint:fix": "eslint --fix src"
 }
 ...
 "eslintConfig": {

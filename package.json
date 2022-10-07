@@ -1,6 +1,6 @@
 {
   "name": "@wttsolutions/eslint-config",
-  "version": "0.0.48",
+  "version": "0.0.49",
   "main": "index.js",
   "scripts": {
     "version:patch": "yarn version --patch --no-git-tag-version",
@@ -8,19 +8,18 @@
     "version:major": "yarn version --major --no-git-tag-version",
     "publ": "yarn publish --no-git-tag-version --access public"
   },
-  "dependencies": {
+  "dependencies": {},
+  "devDependencies": {
     "@babel/core": "^7.19.3",
     "@babel/eslint-parser": "^7.19.1",
     "@babel/preset-react": "^7.18.6",
+    "eslint": "^8.24.0",
     "eslint-config-airbnb": "^19.0.4",
     "eslint-config-prettier": "^8.5.0",
     "eslint-plugin-import": "^2.26.0",
     "eslint-plugin-no-loops": "^0.3.0",
     "eslint-plugin-react": "^7.31.8",
-    "eslint-plugin-react-hooks": "^4.6.0"
-  },
-  "devDependencies": {
-    "eslint": "^8.24.0",
+    "eslint-plugin-react-hooks": "^4.6.0",
     "prettier": "^2.7.1"
   },
   "peerDependencies": {
