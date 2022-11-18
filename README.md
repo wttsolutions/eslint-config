@@ -91,4 +91,6 @@ yarn publ
 
 ### TODO
 
+ - parse all types of files (see proj)
+ - add stylelint
 - ts support
