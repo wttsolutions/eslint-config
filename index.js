@@ -26,15 +26,15 @@ module.exports = {
     'import'
   ],
   globals: {
-    '__DEVELOPMENT__': true,
+    '__DEVELOPMENT__': 'readonly',
     // '__CLIENT__': true,
     // '__SERVER__': true,
     // '__DISABLE_SSR__': true,
     // '__DEVTOOLS__': true,
     //'require': true,
-    'Promise': true,
-    'Set': true,
-    'Symbol': true
+    //'Promise': true,
+    //'Set': true,
+    //'Symbol': true,
   },
   settings: {
     'import/resolver': {

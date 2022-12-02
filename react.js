@@ -22,10 +22,18 @@ module.exports = {
   plugins: [
     'react',
   ],
+  "overrides": [
+    {
+      "files": ["*.jsx", "*.js"]
+    }
+  ],
   settings: {
     react: {
       version: 'detect',
     },
+  },
+  globals: {
+    React: 'readonly'
   },
   rules: {
     'jsx-a11y/accessible-emoji': 'off',
@@ -89,5 +97,11 @@ module.exports = {
     'semi-spacing': 'warn',
     "react/react-in-jsx-scope": "off", // not necessary nowdays
     "react/jsx-uses-react": "off",     // not necessary nowdays
+    'no-unused-vars': [
+      'warn', {
+        'args': 'none',
+        // allow import React (even if not necessary)
+        'varsIgnorePattern': 'React'
+      }],
   }
 };
