@@ -37,17 +37,12 @@ Modify the `package.json`:
 ...
 "scripts": {
   ...
-  "prettier": "prettier --check src/**/*.{js,jsx}",
-  "prettier:fix": "prettier -write src/**/*.{js,jsx}",
+  "prettify": "prettier --check src/**/*.{js,jsx}",
+  "prettify:fix": "prettier -write src/**/*.{js,jsx}",
   "lint": "eslint src",
   "lint:fix": "eslint --fix src"
 }
 ...
-//"eslintConfig": {
-//  "extends": [
-//    "./.eslintrc"
-//  ]
-//}
 ```
 
 
