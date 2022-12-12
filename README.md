@@ -20,15 +20,14 @@ Create the local `.eslintrc` config file:
 
 ```
 {
-  ...
   "extends": [
     "@wttsolutions/eslint-config/react",
     //"@wttsolutions/eslint-config" (if no React)
   ],
   rules: {
-    // any local rules & exceptions if really necessary
+    // local rules 
+    //"no-var": "off"
   }
-  ...
 }
 ```
 
@@ -38,32 +37,28 @@ Modify the `package.json`:
 ...
 "scripts": {
   ...
-  "prettier": "prettier -l src",
-  "prettier:fix": "prettier -w src",
+  "prettier": "prettier --check src/**/*.{js,jsx}",
+  "prettier:fix": "prettier -write src/**/*.{js,jsx}",
   "lint": "eslint src",
   "lint:fix": "eslint --fix src"
 }
 ...
-"eslintConfig": {
-  "extends": [
-    "./.eslintrc"
-  ]
-}
+//"eslintConfig": {
+//  "extends": [
+//    "./.eslintrc"
+//  ]
+//}
 ```
 
-NOTE: `src` is the project sources directory
 
-Run run `yarn lint` to check a project errors are displayed in console.
+Configure your code editor to make him automatically prettify and lint code by the `.eslintrc` and `.prettierrc` configs.  Assummed that you shouldn't run linting scripts manually in most cases.
 
-Configure your code editor to make him automatically prettify and lint code by the `.eslintrc` and `.prettierrc` configs.
 
-### How it should work
+### How it works
 
-1. `prettier -w` formats code
-2. `eslint --fix` applies linting rules to code
+1. `prettier` formats code
+2. `eslint` applies linting rules to code
 3. developer see the remained eslint errors in the code editor and fix them manually
-
-Generally you should configure your code editor to make him perform steps 1 and 2 automatically by the `.eslintrc` and `.prettierrc` rules. Assummed that you do not run any of added scripts manually in most cases.
 
 ## Internal: modify & publish this repository
 
@@ -90,6 +85,5 @@ yarn publ
 ```
 
 ### TODO
-
  - add stylelint
  - ts support
