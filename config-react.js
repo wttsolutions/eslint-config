@@ -15,7 +15,7 @@ module.exports = {
     es6: true,
   },
   extends: [
-    './index',     // base
+    './config-base',     
     'plugin:react/recommended',
     'plugin:react-hooks/recommended',
   ],
@@ -29,7 +29,7 @@ module.exports = {
   ],
   settings: {
     react: {
-      version: 'detect',
+      version: '999', /* stub to aviod eslint-plugin-react warning */
     },
   },
   globals: {

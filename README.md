@@ -5,7 +5,7 @@
 Install this library
 
 ```
-yarn add --dev @wttsolutions/eslint-config
+yarn add --dev @wttsolutions/eslint-config eslint prettier
 ```
 
 Create the local `.prettierrc` config file:
@@ -25,7 +25,7 @@ Create the local `.eslintrc` config file:
     //"@wttsolutions/eslint-config" (if no React)
   ],
   rules: {
-    // local rules 
+    // local rules
     //"no-var": "off"
   }
 }
