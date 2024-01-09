@@ -10,8 +10,7 @@ function test2(p) {
   return [p, 0]
 }
 
-// emit @typescript-eslint/no-unused-vars
-const promise = new Promise((resolve, reject) => resolve('value'));
+const v1 = 10;
 
 
 // emit @typescript-eslint/no-misused-promises

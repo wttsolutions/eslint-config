@@ -1,4 +1,4 @@
-// this error not catched by typescript-eslint (only tsc)
+// This error not catched by typescript-eslint (only tsc)
 let a = 4
 a += 'R_OK'
 
@@ -11,7 +11,7 @@ function test2(p) {
 }
 
 // emit @typescript-eslint/no-unused-vars
-const promise = new Promise((resolve, reject) => resolve('value'));
+const v1 = 10;
 
 
 // emit @typescript-eslint/no-misused-promises
@@ -20,4 +20,4 @@ if (promise2) {
   console.log(`123`)
 }
 
-console.log(a, test1('a'), test2(1), promise, promise2)
+console.log(a, test1('a'), test2(1), promise2)
