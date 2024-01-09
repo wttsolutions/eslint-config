@@ -5,6 +5,7 @@ module.exports = {
   },
   parser: "@typescript-eslint/parser",
   extends: [
+    //extebd separately './config-base',
     "eslint:recommended",
     //"plugin:@typescript-eslint/recommended",
     "plugin:@typescript-eslint/recommended-type-checked",

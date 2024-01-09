@@ -15,8 +15,10 @@ module.exports = {
     es6: true,
   },
   extends: [
-    './config-base',     
+    //extend  separately './config-base',
+    'eslint:recommended',
     'plugin:react/recommended',
+    'plugin:react/jsx-runtime',
     'plugin:react-hooks/recommended',
   ],
   plugins: [
