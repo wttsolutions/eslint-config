@@ -1,7 +1,6 @@
 module.exports = {
   env: {
     node: true,
-    // browser: true
   },
   parser: "@typescript-eslint/parser",
   extends: [
@@ -18,17 +17,10 @@ module.exports = {
   parserOptions: {
     sourceType: "module",
     ecmaVersion: "latest" ,
-    // https://typescript-eslint.io/linting/typed-linting
-    //tsconfigRootDir: __dirname,
-    project:
-      true,
-      //['tsconfig.json'],
-      //['./packages/*/tsconfig.json', './apps/*/tsconfig.json']
+    project: true,
   },
   rules: {
-    "no-var": "error",
-    "no-compare-neg-zero": "warn",
-    "@typescript-eslint/no-unsafe-assignment": "error",
-    "@typescript-eslint/no-unsafe-return": "off"
+    "@typescript-eslint/no-unsafe-return": "off",
+    "@typescript-eslint/no-misused-promises": "error"
   },
 };
