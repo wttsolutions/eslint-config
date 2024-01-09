@@ -10,6 +10,8 @@
     "test-base": "yarn --silent eslint --config ./config-base.js ./test/test-base.js |./utils/check_includes.sh '2 problems'",
     "test-react": "yarn --silent eslint --config ./config-react.js ./test/test-react.jsx |./utils/check_includes.sh '2 problems'",
     "test-ts": "yarn --silent eslint --config ./config-ts.js ./test/test-ts.ts |./utils/check_includes.sh '2 problems'",
+    "test-tsx": "yarn --silent eslint --config ./config-ts.js ./test/test-tsx.tsx |./utils/check_includes.sh '2 problems'",
+
     "test": "concurrently yarn:test-*"
   },
   "dependencies": {

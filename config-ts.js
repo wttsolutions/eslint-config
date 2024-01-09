@@ -21,6 +21,7 @@ module.exports = {
   },
   rules: {
     "@typescript-eslint/no-unsafe-return": "off",
-    "@typescript-eslint/no-misused-promises": "error"
+    "@typescript-eslint/no-misused-promises": "error",
+    "@typescript-eslint/no-unsafe-assignment": "off"
   },
 };
