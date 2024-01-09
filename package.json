@@ -1,6 +1,6 @@
 {
   "name": "@wttsolutions/eslint-config",
-  "version": "0.1.3",
+  "version": "0.1.4",
   "main": "./config-base.js",
   "exports": {
     ".": "./config-base.js",
