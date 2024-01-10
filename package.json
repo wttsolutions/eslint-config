@@ -1,6 +1,6 @@
 {
   "name": "@wttsolutions/eslint-config",
-  "version": "0.1.7",
+  "version": "0.1.8",
   "exports": {
     ".": "./config-base.js",
     "./react": "./config-react.js",

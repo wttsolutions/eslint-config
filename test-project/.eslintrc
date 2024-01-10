@@ -1,0 +1,11 @@
+{
+  "extends": [
+    "@wttsolutions/eslint-config",
+    "@wttsolutions/eslint-config/react",
+    "@wttsolutions/eslint-config/ts",
+  ],
+  rules: {
+    // local rules
+    //"no-var": "off"
+  }
+}
