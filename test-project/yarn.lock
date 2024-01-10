@@ -492,9 +492,9 @@
   integrity sha512-zuVdFrMJiuCDQUMCzQaD6KL28MjnqqN8XnAqiEq9PNm/hCPTSGfrXCOfwj1ow4LFb/tNymJPwsNbVePc1xFqrQ==
 
 "@wttsolutions/eslint-config@^0.1":
-  version "0.1.7"
-  resolved "https://registry.yarnpkg.com/@wttsolutions/eslint-config/-/eslint-config-0.1.7.tgz#a82e133972c56b50ca26e1e7d3e8d6dff16ce240"
-  integrity sha512-6fHqnUA36h+Hx5KR8LXmMyFDoJl6cfX5mVuhpOAud8PoJ8J5oCDyD3n+wGujls1f2WhS1ZKWfqiOBo4zcXcsXQ==
+  version "0.1.9"
+  resolved "https://registry.yarnpkg.com/@wttsolutions/eslint-config/-/eslint-config-0.1.9.tgz#5b295ed0a8532d915b7ab5be6b62294c8357c169"
+  integrity sha512-Fo54qTOpasiqNNeanQbhsT+iFjTnJJZgGKRJ+RzH86dQDSTWK8ontBVS5jKpU0wFto4S0cRFUxkhxvdVqvteUg==
   dependencies:
     "@babel/core" "^7.19.3"
     "@babel/eslint-parser" "^7.19.1"
