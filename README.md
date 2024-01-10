@@ -1,11 +1,11 @@
 # Eslint for WTT projects
 
-## Setup for your project
+## Setup
 
-Install this library
 
 ```
 yarn add --dev @wttsolutions/eslint-config eslint prettier
+
 ```
 
 Create the local `.prettierrc` config file:
@@ -21,11 +21,11 @@ Create the local `.eslintrc` config file:
 ```
 {
   "extends": [
+    "@wttsolutions/eslint-config"
     "@wttsolutions/eslint-config/react",
-    //"@wttsolutions/eslint-config" (if no React)
+    "@wttsolutions/eslint-config/ts"
   ],
   rules: {
-    // local rules
     //"no-var": "off"
   }
 }

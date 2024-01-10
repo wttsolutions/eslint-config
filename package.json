@@ -1,6 +1,6 @@
 {
   "name": "@wttsolutions/eslint-config",
-  "version": "0.1.6",
+  "version": "0.1.7",
   "exports": {
     ".": "./config-base.js",
     "./react": "./config-react.js",
@@ -32,13 +32,13 @@
     "eslint-plugin-jsx-a11y": "^6.8.0",
     "eslint-plugin-no-loops": "^0.3.0",
     "eslint-plugin-react": "^7.31.8",
-    "eslint-plugin-react-hooks": "^4.6.0"
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "typescript": "^5.3.3"
   },
   "devDependencies": {
     "concurrently": "^8.2.2",
     "eslint": "^8.24.0",
-    "prettier": "^2.7.1",
-    "typescript": "^5.3.3"
+    "prettier": "^2.7.1"
   },
   "peerDependencies": {
     "eslint": "^8.0.0",
