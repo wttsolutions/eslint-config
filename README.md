@@ -26,7 +26,7 @@ Create the local `.eslintrc` config file:
     "@wttsolutions/eslint-config/ts"  // optional
   ],
   rules: {
-    //"no-var": "off"
+    // "no-var": "off"
   }
 }
 ```

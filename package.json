@@ -1,6 +1,6 @@
 {
   "name": "@wttsolutions/eslint-config",
-  "version": "0.1.8",
+  "version": "0.1.9",
   "exports": {
     ".": "./config-base.js",
     "./react": "./config-react.js",
@@ -13,7 +13,7 @@
     "version:patch": "yarn version --patch --no-git-tag-version",
     "version:minor": "yarn version --minor --no-git-tag-version",
     "version:major": "yarn version --major --no-git-tag-version",
-    "publ": "yarn publish --no-git-tag-version --access public",
+    "publ": "echo \\\\n | yarn publish --no-git-tag-version --access public",
     "test-base": "yarn --silent eslint --config ./config-base.js ./test/test-base.js |./utils/check_includes.sh '2 problems'",
     "test-react": "yarn --silent eslint --config ./config-react.js ./test/test-react.jsx |./utils/check_includes.sh '2 problems'",
     "test-ts": "yarn --silent eslint --config ./config-ts.js ./test/test-ts.ts |./utils/check_includes.sh '2 problems'",
