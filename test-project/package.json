@@ -1,6 +1,10 @@
 {
+  "name": "test-project-berry",
+  "packageManager": "yarn@4.0.2",
   "devDependencies": {
-    "@wttsolutions/eslint-config": "^0.1",
+    "@types/eslint": "^8",
+    "@wttsolutions/eslint-config": "^0.1.10",
+    "eslint ": "^8.56.0",
     "prettier": "^3.1.1"
   },
   "scripts": {
@@ -8,5 +12,8 @@
     "prettify:fix": "prettier --write src/**/*.{js,jsx,ts,tsx}",
     "lint": "eslint src",
     "lint:fix": "eslint --fix src"
+  },
+  "dependencies": {
+    "@yarnpkg/extensions": "^2.0.0"
   }
 }
