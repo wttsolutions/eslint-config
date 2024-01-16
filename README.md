@@ -21,7 +21,7 @@ Create the local `.eslintrc` config file:
 ```
 {
   "extends": [
-    "@wttsolutions/eslint-config"
+    "@wttsolutions/eslint-config",
     "@wttsolutions/eslint-config/react", // optional
     "@wttsolutions/eslint-config/ts"  // optional
   ],

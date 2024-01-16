@@ -1,6 +1,6 @@
 {
   "name": "@wttsolutions/eslint-config",
-  "version": "0.1.9",
+  "version": "0.1.10",
   "exports": {
     ".": "./config-base.js",
     "./react": "./config-react.js",
@@ -26,6 +26,7 @@
     "@babel/preset-react": "^7.18.6",
     "@typescript-eslint/eslint-plugin": "^6.18.1",
     "@typescript-eslint/parser": "^6.18.1",
+    "eslint": "^8.56.0",
     "eslint-config-airbnb": "^19.0.4",
     "eslint-config-prettier": "^8.5.0",
     "eslint-plugin-import": "^2.26.0",
@@ -37,11 +38,9 @@
   },
   "devDependencies": {
     "concurrently": "^8.2.2",
-    "eslint": "^8.24.0",
     "prettier": "^2.7.1"
   },
   "peerDependencies": {
-    "eslint": "^8.0.0",
     "react": "*"
   },
   "eslintConfig": {},
