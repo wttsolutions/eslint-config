@@ -1,13 +1,15 @@
 {
   "name": "@wttsolutions/eslint-config",
-  "version": "0.1.10",
+  "version": "0.1.11",
   "exports": {
     ".": "./config-base.js",
     "./react": "./config-react.js",
     "./ts": "./config-ts.js"
   },
   "files": [
-    "config-*.js"
+    "config-*.js",
+    ".prettierrc",
+    "tsconfig.json"
   ],
   "scripts": {
     "version:patch": "yarn version --patch --no-git-tag-version",
