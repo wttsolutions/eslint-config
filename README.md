@@ -1,5 +1,6 @@
 # Eslint for WTT projects
 
+
 ## Setup
 
 
@@ -85,16 +86,9 @@ Modify the `package.json`:
 
 Configure your code editor to make him automatically prettify and lint code by the `.eslintrc` and `.prettierrc` configs.  Assummed that you shouldn't run linting scripts manually in most cases.
 
+## Internal: updating this package
 
-### How it works
-
-1. `prettier` formats code
-2. `eslint` applies linting rules to code
-3. developer see the remained eslint errors in the code editor and fix them manually
-
-## Internal: modify & publish this repository
-
-### Login to npm
+### 1. Login to npm
 Make sure you have wright permissions to the https://github.com/wttsolutions/eslint-config repository and your npmjs.com acccount included into the [npmjs.com -> wttsolutions -> develpers](https://www.npmjs.com/settings/wttsolutions/teams/team/developers/users) team members.
 
 ```
@@ -111,5 +105,16 @@ yarn publ
 ```
 Note: when running `yarn publ` DON'T modify the version (it's already updated by `yarn version:patch`
 
-### TODO
+
+
+
+## How it works
+
+1. `prettier` formats code
+2. `eslint` applies linting rules to code
+3. developer see the remained eslint errors in the code editor and fix them manually
+## TODO
  - add stylelint
+
+## Note
+using eslint & typescript as OWN dependencies (not peer) to make this package works more independently from project where it would be used & keep all plugins compatible

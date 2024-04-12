@@ -1,6 +1,6 @@
 {
   "name": "@wttsolutions/eslint-config",
-  "version": "0.1.14",
+  "version": "0.1.16",
   "exports": {
     ".": "./config-base.js",
     "./react": "./config-react.js",
@@ -15,33 +15,29 @@
     "version:patch": "yarn version --patch --no-git-tag-version",
     "version:minor": "yarn version --minor --no-git-tag-version",
     "version:major": "yarn version --major --no-git-tag-version",
-    "publ": "echo \\\\n | yarn publish --no-git-tag-version --access public",
-    "test-base": "yarn --silent eslint --config ./config-base.js ./test/test-base.js |./utils/check_includes.sh '2 problems'",
-    "test-react": "yarn --silent eslint --config ./config-react.js ./test/test-react.jsx |./utils/check_includes.sh '2 problems'",
-    "test-ts": "yarn --silent eslint --config ./config-ts.js ./test/test-ts.ts |./utils/check_includes.sh '2 problems'",
-    "test-tsx": "yarn --silent eslint --config ./config-ts.js ./test/test-tsx.tsx |./utils/check_includes.sh '2 problems'",
-    "test": "concurrently yarn:test-*"
+    "publ": "echo \\\\n | yarn publish --no-git-tag-version --access public"
   },
   "dependencies": {
-    "@babel/core": "^7.19.3",
-    "@babel/eslint-parser": "^7.19.1",
-    "@babel/preset-react": "^7.18.6",
-    "@typescript-eslint/eslint-plugin": "^6.18.1",
-    "@typescript-eslint/parser": "^6.18.1",
-    "eslint": "^8.56.0",
+    "@babel/core": "^7.24.4",
+    "@babel/eslint-parser": "^7.24.1",
+    "@babel/preset-react": "^7.24.1",
+    "@typescript-eslint/eslint-plugin": "^7.6.0",
+    "@typescript-eslint/parser": "^7.6.0",
+    "eslint": "^9.0.0",
     "eslint-config-airbnb": "^19.0.4",
     "eslint-config-airbnb-base": "^15.0.0",
-    "eslint-config-prettier": "^8.5.0",
-    "eslint-plugin-import": "^2.26.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-import": "^2.29.1",
     "eslint-plugin-jsx-a11y": "^6.8.0",
     "eslint-plugin-no-loops": "^0.3.0",
-    "eslint-plugin-react": "^7.31.8",
+    "eslint-plugin-react": "^7.34.1",
     "eslint-plugin-react-hooks": "^4.6.0",
-    "typescript": "^5.3.3"
+    "typescript": "^5.4.5"
   },
   "devDependencies": {
     "concurrently": "^8.2.2",
-    "prettier": "^2.7.1"
+    "prettier": "^3.2.5",
+    "yarn-upgrade-all": "^0.7.2"
   },
   "peerDependencies": {},
   "eslintConfig": {},
