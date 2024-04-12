@@ -6,6 +6,10 @@
 ```
 yarn add --dev @wttsolutions/eslint-config@^0.1 eslint prettier
 
+// for react:
+yarn add --dev react
+
+
 ```
 
 Create the local `.prettierrc` config file:

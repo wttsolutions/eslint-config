@@ -18,6 +18,7 @@ module.exports = {
     //extend  separately './config-base',
     'eslint:recommended',
     'plugin:react/recommended',
+    "eslint-config-airbnb",
     'plugin:react/jsx-runtime',
     'plugin:react-hooks/recommended',
   ],

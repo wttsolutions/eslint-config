@@ -18,8 +18,8 @@ module.exports = {
   extends: [
     "eslint:recommended",
     "plugin:import/errors",
-    "plugin:import/warnings",
-    "eslint-config-airbnb",
+    "eslint-config-airbnb-base",    
+    "plugin:import/warnings"
   ],
   plugins: ["no-loops", "import"],
   globals: {

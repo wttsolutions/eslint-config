@@ -1,13 +1,13 @@
 {
   "name": "@wttsolutions/eslint-config",
-  "version": "0.1.11",
+  "version": "0.1.13",
   "exports": {
     ".": "./config-base.js",
     "./react": "./config-react.js",
-    "./ts": "./config-ts.js"
+    "./ts": "./config-ts.js",
+    "./config-*.js": "./config-*.js"
   },
   "files": [
-    "config-*.js",
     ".prettierrc",
     "tsconfig.json"
   ],
@@ -30,6 +30,7 @@
     "@typescript-eslint/parser": "^6.18.1",
     "eslint": "^8.56.0",
     "eslint-config-airbnb": "^19.0.4",
+    "eslint-config-airbnb-base": "^15.0.0",
     "eslint-config-prettier": "^8.5.0",
     "eslint-plugin-import": "^2.26.0",
     "eslint-plugin-jsx-a11y": "^6.8.0",
