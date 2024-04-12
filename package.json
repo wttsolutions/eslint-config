@@ -1,6 +1,6 @@
 {
   "name": "@wttsolutions/eslint-config",
-  "version": "0.1.13",
+  "version": "0.1.14",
   "exports": {
     ".": "./config-base.js",
     "./react": "./config-react.js",
@@ -43,9 +43,7 @@
     "concurrently": "^8.2.2",
     "prettier": "^2.7.1"
   },
-  "peerDependencies": {
-    "react": "*"
-  },
+  "peerDependencies": {},
   "eslintConfig": {},
   "license": "MIT",
   "repository": {
