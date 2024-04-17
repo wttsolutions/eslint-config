@@ -1,6 +1,6 @@
 {
   "name": "@wttsolutions/eslint-config",
-  "version": "0.1.16",
+  "version": "0.1.17",
   "exports": {
     ".": "./config-base.js",
     "./react": "./config-react.js",
@@ -15,7 +15,13 @@
     "version:patch": "yarn version --patch --no-git-tag-version",
     "version:minor": "yarn version --minor --no-git-tag-version",
     "version:major": "yarn version --major --no-git-tag-version",
-    "publ": "echo \\\\n | yarn publish --no-git-tag-version --access public"
+    "publ": "echo \\\\n | yarn publish --no-git-tag-version --access public",
+    "test": "concurrently 'yarn:test-*' && echo 'ALL TESTS OK'",
+    "test:quick": "yarn --silent run eslint --config ./config-base.js ./test/simpleTest.js |grep '5 problems'",
+    "test-base": "yarn --silent run eslint --config ./config-base.js ./test/test-base.js | grep '2 problems'",
+    "test-react": "yarn --silent run eslint --config ./config-react.js ./test/test-react.jsx | grep '2 problems'",
+    "test-ts": "yarn --silent run eslint --config ./config-ts.js ./test/test-ts.ts | grep '2 problems'",
+    "test-tsx": "yarn --silent run eslint --config ./config-ts.js ./test/test-tsx.tsx | grep '2 problems'"
   },
   "dependencies": {
     "@babel/core": "^7.24.4",
@@ -23,7 +29,7 @@
     "@babel/preset-react": "^7.24.1",
     "@typescript-eslint/eslint-plugin": "^7.6.0",
     "@typescript-eslint/parser": "^7.6.0",
-    "eslint": "^9.0.0",
+    "eslint": "^8.0.0",
     "eslint-config-airbnb": "^19.0.4",
     "eslint-config-airbnb-base": "^15.0.0",
     "eslint-config-prettier": "^9.1.0",

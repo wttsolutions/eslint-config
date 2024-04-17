@@ -8,4 +8,4 @@ const component2 = (
   <div unknown="property"></div>
 );
 
-console.log(component1, component2)
+console.log(component1, component2);  // eslint-disable-line

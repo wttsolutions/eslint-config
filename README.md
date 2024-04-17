@@ -115,6 +115,13 @@ Note: when running `yarn publ` DON'T modify the version (it's already updated by
 3. developer see the remained eslint errors in the code editor and fix them manually
 ## TODO
  - add stylelint
+ - update to eslint v9 after
+   dependept packages support it. In particular:
+    - babel/eslint/babel-eslint-parser/package.json at main · babel/babel https://github.com/babel/babel/blob/main/eslint/babel-eslint-parser/package.json
+    - https://github.com/airbnb/javascript/blob/master/packages/eslint-config-airbnb/package.json
+    and probably others (try ```yarn add eslint@^9.0.0``` and see all warnings)
+   (see also config-base-9.js) 
+
 
 ## Note
 using eslint & typescript as OWN dependencies (not peer) to make this package works more independently from project where it would be used & keep all plugins compatible
