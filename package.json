@@ -1,14 +1,14 @@
 {
   "name": "@wttsolutions/eslint-config",
-  "version": "0.1.19",
+  "version": "0.1.20",
   "exports": {
     ".": "./config-base.js",
     "./react": "./config-react.js",
     "./ts": "./config-ts.js",
-    "./config-*.js": "./config-*.js"
+    "./config-*.js": "./config-*.js",
+    "./prettier.config.js": "./prettier.config.js"
   },
   "files": [
-    ".prettierrc",
     "tsconfig.json"
   ],
   "scripts": {

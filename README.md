@@ -13,12 +13,14 @@ yarn add --dev react
 
 ```
 
-Create the local `.prettierrc` config file:
-
+Create `prettier.config.js` with:
 ```
-{
-  "singleQuote": true
+module.exports = {
+  ...require('@wttsolutions/eslint-config/prettier.config.js'),
+  // custom rules
+  // singleQuote: false
 }
+
 ```
 
 Create the local `.eslintrc` config file:
@@ -84,7 +86,7 @@ Modify the `package.json`:
 ```
 
 
-Configure your code editor to make him automatically prettify and lint code by the `.eslintrc` and `.prettierrc` configs.  Assummed that you shouldn't run linting scripts manually in most cases.
+Configure your code editor to make him automatically prettify and lint code by the `.eslintrc` and `prettier.config.js` configs.  Assummed that you shouldn't run linting scripts manually in most cases.
 
 ## Internal: updating this package
 
@@ -120,7 +122,7 @@ Note: when running `yarn publ` DON'T modify the version (it's already updated by
     - babel/eslint/babel-eslint-parser/package.json at main · babel/babel https://github.com/babel/babel/blob/main/eslint/babel-eslint-parser/package.json
     - https://github.com/airbnb/javascript/blob/master/packages/eslint-config-airbnb/package.json
     and probably others (try ```yarn add eslint@^9.0.0``` and see all warnings)
-   (see also config-base-9.js) 
+   (see also config-base-9.js)
 
 
 ## Note
