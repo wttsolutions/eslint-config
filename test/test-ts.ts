@@ -21,3 +21,10 @@ if (promise2) {
 }
 
 console.log(a, test1('a'), test2(1), promise2)
+
+// CODE TO TEST PRETTIER:
+/* eslint-disable */
+let   someVariable = {
+  b: 11,
+name: 'John',}
+/* eslint-enable */

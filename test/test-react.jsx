@@ -9,3 +9,10 @@ const component2 = (
 );
 
 console.log(component1, component2);  // eslint-disable-line
+
+// CODE TO TEST PRETTIER:
+/* eslint-disable */
+let   someVariable = {
+  b: 11,
+name: 'John',}
+/* eslint-enable */

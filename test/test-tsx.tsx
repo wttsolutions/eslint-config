@@ -32,3 +32,10 @@ const component2 = (
 );
 
 console.log(component1, component2)
+
+// CODE TO TEST PRETTIER:
+/* eslint-disable */
+let   someVariable = {
+  b: 11,
+name: 'John',}
+/* eslint-enable */
