@@ -1,5 +1,6 @@
-# Eslint for WTT projects
+# Eslint, typescript, prettier configs
 
+Features: react, ts
 
 ## Setup
 
@@ -23,14 +24,14 @@ module.exports = {
 
 ```
 
-Create the local `.eslintrc` config file:
+Create the local `.eslintrc.js` config file:
 
 ```
-{
+module.exports = {
   "extends": [
     "@wttsolutions/eslint-config",
-    "@wttsolutions/eslint-config/react", // optional
-    "@wttsolutions/eslint-config/ts"  // optional
+    //optional "@wttsolutions/eslint-config/.eslintrc-react.js",
+    //optional "@wttsolutions/eslint-config/.eslintrc-ts.js"
   ],
   rules: {
     // "no-var": "off"

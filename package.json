@@ -1,16 +1,15 @@
 {
   "name": "@wttsolutions/eslint-config",
-  "version": "0.1.22",
+  "version": "0.1.23",
   "exports": {
-    ".": "./config-base.js",
-    "./react": "./config-react.js",
-    "./ts": "./config-ts.js",
-    "./config-*.js": "./config-*.js",
+    ".": "./.eslintrc-base.js",
+    "./.eslintrc.js": "./.eslintrc.js",
+    "./.eslintrc-*.js": "./.eslintrc-*.js",
     "./prettier.config.js": "./prettier.config.js"
   },
   "files": [
+    ".eslintrc*.js",
     "tsconfig.json",
-    "config-*.js",
     "prettier.config.js"
   ],
   "scripts": {
@@ -19,10 +18,10 @@
     "version:major": "yarn version --major --no-git-tag-version",
     "publ": "echo \\\\n | yarn publish --no-git-tag-version --access public",
     "test": "concurrently 'yarn:test-*' && echo 'ALL TESTS OK'",
-    "test-eslint-base": "yarn --silent run eslint --config ./config-base.js ./test/test-base.js | grep '2 problems'",
-    "test-eslint-react": "yarn --silent run eslint --config ./config-react.js ./test/test-react.jsx | grep '2 problems'",
-    "test-eslint-ts": "yarn --silent run eslint --config ./config-ts.js ./test/test-ts.ts | grep '2 problems'",
-    "test-eslint-tsx": "yarn --silent run eslint --config ./config-ts.js ./test/test-tsx.tsx | grep '2 problems'",
+    "test-eslint-base": "yarn --silent run eslint ./test/test-base.js | grep '2 problems'",
+    "test-eslint-react": "yarn --silent run eslint --no-eslintrc --config ./.eslintrc-react.js ./test/test-react.jsx | grep '2 problems'",
+    "test-eslint-ts": "yarn --silent run eslint --no-eslintrc --config ./.eslintrc-ts.js ./test/test-ts.ts | grep '2 problems'",
+    "test-eslint-tsx": "yarn --silent run eslint --no-eslintrc --config ./.eslintrc-ts.js ./test/test-tsx.tsx | grep '2 problems'",
     "test-prettier-base": "prettier test/test-base.js | grep \"  name: 'John',\"",
     "test-prettier-react": "prettier test/test-react.jsx | grep \"  name: 'John',\"",
     "test-prettier-ts": "prettier test/test-ts.ts | grep \"  name: 'John',\"",
