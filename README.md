@@ -1,30 +1,13 @@
-# Eslint, typescript, prettier configs
-
-Features: react, ts
+n# Centralized eslint (+react), prettier, typescript configs
 
 ## Setup
-
 ```
 yarn add --dev @wttsolutions/eslint-config@^0.1
 
-// review & install necessary peer dependencies (eslint, react, prettier, typescript...)
+// reivew & install project peer dependencies (eslint, react, prettier, typescript...)
 npx check-peer-dependencies --findSolutions
-
-
 ```
-
-Create `prettier.config.js`:
-```
-module.exports = {
-  ...require('@wttsolutions/eslint-config/prettier.config.js'),
-
-  // custom rules
-  // singleQuote: false,
-}
-
-```
-
-Create the local `.eslintrc.js` config file:
+Create `.eslintrc.js`:
 
 ```
 module.exports = {
@@ -39,40 +22,31 @@ module.exports = {
 }
 ```
 
-(Optional) Create the local `tsconfig.json` config file:
+(Optional) Create `prettier.config.js`:
+```
+module.exports = {
+  ...require('@wttsolutions/eslint-config/prettier.config.js'),
+
+  // custom rules
+  // singleQuote: false,
+}
+
+```
+
+
+(Optional) Create `tsconfig.json` with custom options:
 ```
 {
-  "$schema": "https://json.schemastore.org/tsconfig",
-  "display": "Default",
+  "extends": "./node_modules/@wttsolutions/eslint-config/tsconfig.json",
 
   "compilerOptions": {
-    "composite": false,
-    "declaration": true,
-    "declarationMap": true,
-    "esModuleInterop": true,
-    "forceConsistentCasingInFileNames": true,
-    "inlineSources": false,
-    "isolatedModules": true,
-    "moduleResolution": "bundler",
-    "noUnusedLocals": false,
-    "noUnusedParameters": false,
-    "preserveWatchOutput": true,
-    "skipLibCheck": true,
-    "strict": true,
-    "allowImportingTsExtensions": true,
-    "resolveJsonModule": true,
-    /* free typing */
-    "noImplicitAny": false,
-    "noImplicitThis": false,
-    "allowJs": true,
-    "checkJs": true
-  },
-  "exclude": ["node_modules"]
+    "removeComments": false
+  }
 }
 ```
+Note: ``extends`` works via local path only because of bug in ts
 
-
-Modify the `package.json`:
+Modify the `package.json` according project requirements:
 
 ```
 ...
@@ -86,8 +60,7 @@ Modify the `package.json`:
 ...
 ```
 
-
-Configure your code editor to make him automatically prettify and lint code by the `.eslintrc` and `prettier.config.js` configs.  Assummed that you shouldn't run linting scripts manually in most cases.
+Configure your code editor to make him automatically prettify and lint code by the `.eslintrc.js` and `prettier.config.js` configs. Assummed that you shouldn't run linting scripts manually in most cases.
 
 ## UPDATING THIS PACKAGE (internal)
 
