@@ -18,8 +18,9 @@ module.exports = {
   extends: [
     "eslint:recommended",
     "plugin:import/errors",
-    "eslint-config-airbnb-base",    
-    "plugin:import/warnings"
+    "eslint-config-airbnb-base",
+    "plugin:import/warnings",
+    "prettier", // (last line), turn off prettier-incompatible rules
   ],
   plugins: ["no-loops", "import"],
   globals: {
