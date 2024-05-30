@@ -92,6 +92,7 @@ Note: when running `yarn publ` DON'T modify the version (it's already updated by
 
 ## TODO
  - add stylelint
+ - add eslint-config-prettier (to disable prettier-uncompatible eslint rules)
  - update to eslint v9 after dependept packages support it. In particular:
     - babel/eslint/babel-eslint-parser/package.json at main · babel/babel https://github.com/babel/babel/blob/main/eslint/babel-eslint-parser/package.json
     - https://github.com/airbnb/javascript/blob/master/packages/eslint-config-airbnb/package.json
